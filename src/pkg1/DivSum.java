@@ -8,14 +8,19 @@ public class DivSum {
 
 		private static Scanner sc;
 
-		int result(int N)
+		int calculateSum(int N)
 		{	
 			// iterate from 0 to N
 			for (int num = 0; num < N; num++)
 			{	
 				// Short-circuit operator is used
-				if (num % 3 == 0 && num % 5 == 0)
+				if (num % 3 == 0 ||num%5==0)
 					System.out.print(num + " ");
+				 
+	
+				
+				
+				
 			}
 			return N;
 		}
@@ -24,6 +29,7 @@ public class DivSum {
 		public static void main(String []args)
 		{
 			// input goes here
+			int sum1=0;
 		
 			System.out.println("enter the value of n");
 			sc = new Scanner(System.in);
@@ -31,7 +37,20 @@ public class DivSum {
 			
 			// Calling function
 			DivSum ob =new DivSum();
-			ob.result(N);
+			ob.calculateSum(N);
+			for (int num = 0; num < N; num++) {
+				if (num % 3 == 0 ||num %5 == 0)
+					sum1=num+sum1;
+				
+					
+				
+			}
+			System.out.println(sum1);
+				
+				
+				
+				
+					
 		}
 	}
 
